@@ -83,6 +83,21 @@ export const MiningSection: React.FC<MiningSectionProps> = ({
   return (
     <div className="bg-gradient-to-br from-slate-800/40 via-blue-900/40 to-purple-900/40 backdrop-blur-xl rounded-3xl p-8 border border-blue-400/30 shadow-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-red-500/5 to-pink-500/5"></div>
+      
+      {/* Mining Particle Effects */}
+      {isMining && miningParticles.map((particle) => (
+        <div
+          key={particle.id}
+          className="absolute w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-70 animate-ping pointer-events-none"
+          style={{
+            left: `${particle.x}%`,
+            top: `${particle.y}%`,
+            animationDelay: `${particle.delay}s`,
+            animationDuration: '1.5s'
+          }}
+        />
+      ))}
+      
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 via-red-600 to-pink-700 rounded-full mb-6 shadow-2xl ring-4 ring-orange-400/30 animate-pulse relative z-10">
           <Pickaxe className="w-8 h-8 text-white" />

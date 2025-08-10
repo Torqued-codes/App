@@ -3,6 +3,7 @@ import { User, Transaction } from '../types';
 import { MiningSection } from './MiningSection';
 import { SendTokens } from './SendTokens';
 import { TransactionHistory } from './TransactionHistory';
+import { AboutSection } from './AboutSection';
 import { Header } from './Header';
 import { formatTQAmount } from '../utils/crypto';
 
@@ -21,7 +22,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
   onAddTransaction,
   onLogout,
 }) => {
-  const [activeTab, setActiveTab] = useState<'mine' | 'send' | 'history'>('mine');
+  const [activeTab, setActiveTab] = useState<'mine' | 'send' | 'history' | 'about'>('mine');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
@@ -52,10 +53,10 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
         {/* Navigation Tabs */}
         <div className="flex justify-center mb-8">
-          <div className="bg-gradient-to-r from-slate-800/60 via-blue-900/60 to-purple-900/60 backdrop-blur-xl rounded-2xl p-2 border border-blue-400/30 shadow-xl">
+          <div className="bg-gradient-to-r from-slate-800/60 via-blue-900/60 to-purple-900/60 backdrop-blur-xl rounded-2xl p-2 border border-blue-400/30 shadow-xl flex flex-wrap justify-center gap-1">
             <button
               onClick={() => setActiveTab('mine')}
-              className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                 activeTab === 'mine'
                   ? 'bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 text-white shadow-lg transform scale-105'
                   : 'text-blue-300/80 hover:text-white hover:bg-blue-500/20 hover:scale-105'
@@ -65,7 +66,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('send')}
-              className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                 activeTab === 'send'
                   ? 'bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 text-white shadow-lg transform scale-105'
                   : 'text-blue-300/80 hover:text-white hover:bg-blue-500/20 hover:scale-105'
@@ -75,13 +76,23 @@ export const Dashboard: React.FC<DashboardProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('history')}
-              className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                 activeTab === 'history'
                   ? 'bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 text-white shadow-lg transform scale-105'
                   : 'text-blue-300/80 hover:text-white hover:bg-blue-500/20 hover:scale-105'
               }`}
             >
               History
+            </button>
+            <button
+              onClick={() => setActiveTab('about')}
+              className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
+                activeTab === 'about'
+                  ? 'bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 text-white shadow-lg transform scale-105'
+                  : 'text-blue-300/80 hover:text-white hover:bg-blue-500/20 hover:scale-105'
+              }`}
+            >
+              About
             </button>
           </div>
         </div>
@@ -109,6 +120,14 @@ export const Dashboard: React.FC<DashboardProps> = ({
               transactions={transactions}
               userWalletAddress={user.walletAddress}
             />
+          )}
+          
+          {activeTab === 'about' && (
+            <AboutSection />
+          )}
+          
+          {activeTab === 'about' && (
+            <AboutSection />
           )}
         </div>
       </div>
