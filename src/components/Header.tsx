@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
               </button>
 
               {showUserDropdown && (
-                <div className="absolute right-0 top-full mt-2 w-80 bg-gradient-to-br from-slate-800/95 via-blue-900/95 to-purple-900/95 backdrop-blur-xl rounded-2xl border border-purple-400/30 shadow-2xl z-50 overflow-hidden">
+                <div className="absolute right-0 top-full mt-2 w-80 bg-gradient-to-br from-slate-800/95 via-blue-900/95 to-purple-900/95 backdrop-blur-xl rounded-2xl border border-purple-400/30 shadow-2xl z-[9999] overflow-hidden">
                   <div className="p-6 space-y-4">
                     <div className="text-center pb-4 border-b border-purple-400/20">
                       <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-indigo-600/20 rounded-full mb-3 border border-purple-400/30">
@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
       {/* Backdrop to close dropdown */}
       {showUserDropdown && (
         <div 
-          className="fixed inset-0 z-40" 
+          className="fixed inset-0 z-[9998]" 
           onClick={() => setShowUserDropdown(false)}
         />
       )}

@@ -44,9 +44,15 @@ export const Dashboard: React.FC<DashboardProps> = ({
             <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 mb-6 relative z-10 animate-pulse">
               {formatTQAmount(user.balance)}
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl border border-blue-400/30 backdrop-blur-sm relative z-10">
-              <span className="text-blue-300/70">Wallet:</span>
-              <span className="text-white font-mono">{user.walletAddress.slice(0, 6)}...{user.walletAddress.slice(-4)}</span>
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-indigo-600/20 rounded-xl border border-purple-400/30 backdrop-blur-sm relative z-10">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden">
+                <img 
+                  src="/Gemini_Generated_Image_cmknr0cmknr0cmkn copy.png" 
+                  alt="Torq Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="text-white font-bold text-xl">TORQ</span>
             </div>
           </div>
         </div>
