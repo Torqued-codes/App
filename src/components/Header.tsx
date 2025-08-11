@@ -13,8 +13,12 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 rounded-full shadow-lg ring-2 ring-blue-400/30">
-              <Coins className="w-6 h-6 text-white" />
+            <div className="flex items-center justify-center w-12 h-12 rounded-full shadow-lg ring-2 ring-blue-400/30 overflow-hidden">
+              <img 
+                src="/Gemini_Generated_Image_cmknr0cmknr0cmkn copy.png" 
+                alt="Torq Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">Torq</h1>

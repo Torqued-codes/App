@@ -49,8 +49,12 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLogin, onRegister, onCreat
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 rounded-full mb-6 shadow-2xl ring-4 ring-blue-400/30 animate-pulse">
-            <Coins className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 shadow-2xl ring-4 ring-blue-400/30 animate-pulse overflow-hidden">
+            <img 
+              src="/Gemini_Generated_Image_cmknr0cmknr0cmkn copy.png" 
+              alt="Torq Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-3">Torq</h1>
           <p className="text-blue-300/80 text-lg">Your Premium Digital Currency Platform</p>

@@ -125,10 +125,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
           {activeTab === 'about' && (
             <AboutSection />
           )}
-          
-          {activeTab === 'about' && (
-            <AboutSection />
-          )}
         </div>
       </div>
     </div>

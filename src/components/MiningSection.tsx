@@ -3,6 +3,14 @@ import { Pickaxe, Zap, TrendingUp, Clock } from 'lucide-react';
 import { User, Transaction } from '../types';
 import { generateTransactionHash } from '../utils/crypto';
 
+// Mining particle data
+const miningParticles = Array.from({ length: 12 }, (_, i) => ({
+  id: i,
+  x: Math.random() * 100,
+  y: Math.random() * 100,
+  delay: Math.random() * 2,
+}));
+
 interface MiningSectionProps {
   user: User;
   onUpdateUser: (user: User) => void;

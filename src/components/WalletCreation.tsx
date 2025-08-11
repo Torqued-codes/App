@@ -60,8 +60,12 @@ export const WalletCreation: React.FC<WalletCreationProps> = ({
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 via-emerald-600 to-teal-700 rounded-full mb-6 shadow-2xl ring-4 ring-green-400/30 animate-pulse">
               <Wallet className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-3">Create Your Wallet</h2>
-            <p className="text-blue-300/80 text-lg">Generate a secure wallet to store your Torq tokens</p>
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 shadow-2xl ring-4 ring-green-400/30 animate-pulse overflow-hidden">
+            <img 
+              src="/Gemini_Generated_Image_cmknr0cmknr0cmkn copy.png" 
+              alt="Torq Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
 
           {!walletData ? (
