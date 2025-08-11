@@ -60,6 +60,7 @@ export const WalletCreation: React.FC<WalletCreationProps> = ({
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 via-emerald-600 to-teal-700 rounded-full mb-6 shadow-2xl ring-4 ring-green-400/30 animate-pulse">
               <Wallet className="w-8 h-8 text-white" />
             </div>
+          </div>
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 shadow-2xl ring-4 ring-green-400/30 animate-pulse overflow-hidden">
             <img 
               src="/Gemini_Generated_Image_cmknr0cmknr0cmkn copy.png" 
